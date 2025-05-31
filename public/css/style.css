@@ -1,0 +1,514 @@
+/* Stalinist One; Prosto One */
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Stalinist+One&display=swap");
+
+body {
+    background-color: #fff;
+    display: flex;
+    /* Флексбокс сетка */
+    flex-direction: column;
+    /* Направление главной оси */
+    justify-content: flex-end;
+    /* Элементы в конце контейнера */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 100;
+}
+
+.header-container {
+    position: fixed;
+    top: 1vw;
+    width: 80vw;
+    height: 2vw;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #14595f;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.4vw;
+    font-family: "Stalinist One", serif;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-navigation {
+    display: flex;
+    gap: 1vw;
+    font-family: "Prosto One", serif;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9vw;
+    transition: color 0.3s ease;
+}
+
+.cart-link {
+    font-family: "Prosto One", serif;
+    background-color: #278e97;
+    color: #fff;
+    padding: 0.6vw 1.5vw;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9vw;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cart-link:hover {
+    opacity: 0.8;
+}
+
+
+/* Main Styles */
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Main Styles: Section Carousel */
+.carousel {
+    position: relative;
+    width: 93.8vw;
+    height: 30vw;
+    margin-top: 5vw;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-container {
+    display: flex;
+    width: 200vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Main Styles: Section Tiles */
+.tiles {
+    width: 95vw;
+}
+
+.tiles-card {
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tiles-top-left {
+    margin: 10px 10px;
+    width: 33vw;
+    height: 18vw;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.tiles-middle-left {
+    margin: 20px 10px;
+    width: 33vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tiles-choose-tab {
+    width: 28vw;
+    height: 1.5vw;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #14595f;
+    padding: 10px 20px;
+    color: white;
+}
+
+.tiles-choose-nav {
+    display: flex;
+    gap: 1.5vw;
+    font-family: "Prosto One", serif;
+    position: relative;
+}
+
+.tiles-choose-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1vw;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.tiles-choose-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #278e97;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.tiles-choose-nav a[data-active="true"]::after {
+    width: 100%;
+}
+
+.tiles-choose-nav a:hover {
+    color: #278e97;
+}
+
+.tiles-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5vw;
+    margin-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.tiles-products-item {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 14vw;
+    height: 15vw;
+
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.tiles-products-item img {
+    width: 100%;
+    height: 70%;
+    margin-right: 1vw;
+    border-radius: 10px;
+}
+
+.text-container {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.text-container p {
+    font-family: "Prosto One", serif;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #278e97;
+    margin: 0 0 10px;
+}
+
+.text-container span {
+    font-family: "Prosto One", serif;
+    font-size: 0.8vw;
+    color: #000;
+}
+
+.tiles-products-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.tiles-bottom-left {
+    margin: 10px 10px;
+    width: 33vw;
+    height: 15.5vw;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.tiles-right-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tiles-right {
+    margin: 10px;
+    width: calc(50% - 20px);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tiles-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Modal Window Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 60%;
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+}
+
+.modal-image {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+}
+
+.modal-details {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.product-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+
+.discount {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.reviews {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.reviews span {
+    margin-left: 10px;
+}
+
+.size-selector {
+    margin-top: 20px;
+}
+
+.size-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.size-buttons button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 3vw;
+    text-align: center;
+}
+
+.size-buttons button:hover {
+    background-color: #ddd;
+}
+
+.size-buttons button.active {
+    background-color: #278e97;
+    color: white;
+}
+
+.add-to-cart {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #278e97;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.add-to-cart:hover {
+    background-color: #14595f;
+}
+
+.store-availability {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.store-availability:hover {
+    background-color: #e9ecef;
+}
+
+
+/* Footer Styles */
+footer {
+    box-sizing: border-box;
+    font-family: "Prosto One", serif;
+    position: relative;
+    width: 100vw;
+    padding: 20px 50px;
+    background: #171821;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+
+.social,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social li,
+.menu li {
+    list-style: none;
+}
+
+.social li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.75;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1em;
+}

@@ -1,0 +1,40 @@
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-image">
+            <img id="modalImage" src="" alt="Product Image">
+        </div>
+        <div class="modal-details">
+            <h2 class="product-title" id="modalTitle"></h2>
+            <div class="reviews">
+                <span>★★★★☆</span>
+                <span>4.88 (8 отзывов)</span>
+            </div>
+            <div class="discount">Скидка -20% и 30% бонусами до 02.06</div>
+            <p class="product-price" id="modalPrice"></p>
+            <p id="modalDescription"></p>
+            <div class="size-selector">
+                <p>Размер:</p>
+                <div class="size-buttons">
+                    <button onclick="selectSize(this)">16</button>
+                    <button onclick="selectSize(this)">16.5</button>
+                    <button onclick="selectSize(this)">17</button>
+                    <button onclick="selectSize(this)">17.5</button>
+                    <button onclick="selectSize(this)">18</button>
+                    <button onclick="selectSize(this)">18.5</button>
+                    <button onclick="selectSize(this)">19</button>
+                    <button onclick="selectSize(this)">19.5</button>
+                    <button onclick="selectSize(this)">20</button>
+                    <button onclick="selectSize(this)">20.5</button>
+                    <button onclick="selectSize(this)">21</button>
+                    <button onclick="selectSize(this)">21.5</button>
+                    <button onclick="selectSize(this)">22</button>
+                </div>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">Добавить в корзину</button>
+            <div class="store-availability">
+                <p>Наличие в магазинах</p>
+            </div>
+        </div>
+    </div>
+</div>

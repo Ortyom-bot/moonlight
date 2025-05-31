@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="scripts/carousel.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/catalog.js"></script>
+
+    <title>MOONLIGHT</title>
+</head>
+
+<body style='overflow-x: hidden;'>
+    <%- include('templates/header.ejs') %>
+
+        <main>
+            <section class="catalog">
+                <div class="catalog-card">
+                    <div class="catalog-left">
+                        <div class="catalog-choose-tab">
+                            <nav class="catalog-choose-nav">
+                                <a href="#" class="catalog-choose-nav-active" data-active="true">Золото</a>
+                                <a href="#">Платина</a>
+                                <a href="#">Серебро</a>
+                                <a href="#">Бижутерия</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="catalog-right-container">
+                        <div class="catalog-products">
+                            <!-- Золото -->
+                            <div class="catalog-products-item" id="z_ring1" onclick="openModal('Платиновое обручальное кольцо', '46 120 ₽', '76 400 ₽', 'Подробное описание платинового кольца.', 'images/tiles_zoloto/ring_1.png')">
+                                <img src="images/tiles_zoloto/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотое кольцо</p>
+                                    <span>6 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_ring2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/ring_2.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотое кольцо</p>
+                                    <span>12 990 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_ring3" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/ring_3.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотое кольцо</p>
+                                    <span>31 990 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_bracelet1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/bracelet_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотой браслет</p>
+                                    <span>15 990 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_bracelet2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/bracelet_2.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотой браслет</p>
+                                    <span>35 990 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_earrings" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/earrings.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотые серьги</p>
+                                    <span>19 990 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_pendant" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/pendant.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотая подвеска</p>
+                                    <span>12 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="z_brooch" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_zoloto/brooch.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Золотая брошь</p>
+                                    <span>8 990 ₽</span>
+                                </div>
+                            </div>
+
+                            <!-- Платина -->
+                            <div class="catalog-products-item" id="p_ring1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_ring2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_ring3" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_bracelet1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_bracelet2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_earrings" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_pendant" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="p_brooch" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_platina/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Платиновое кольцо</p>
+                                    <span>76 590 ₽</span>
+                                </div>
+                            </div>
+
+
+                            <!-- Серебро -->
+                            <div class="catalog-products-item" id="s_ring1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_ring2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_ring3" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_bracelet1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_bracelet2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_earrings" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_pendant" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="s_brooch" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_serebro/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Серебрянное кольцо</p>
+                                    <span>6 490 ₽</span>
+                                </div>
+                            </div>
+
+
+                            <!-- Бижутерия -->
+                            <div class="catalog-products-item" id="b_ring1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_ring2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_ring3" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_bracelet1" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_bracelet2" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_earrings" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_pendant" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                            <div class="catalog-products-item" id="b_brooch" onclick="openModal('Золотое кольцо', '6 590 ₽', 'Подробное описание золотого кольца.')">
+                                <img src="images/tiles_bizhuteria/ring_1.png" alt="Кольцо" />
+                                <div class="text-container">
+                                    <p>Стальное кольцо</p>
+                                    <span>750 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <%- include('templates/footer.ejs') %>
+</body>
+
+</html>
