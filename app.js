@@ -2,7 +2,7 @@ const { publicDecrypt } = require("crypto");
 const express = require("express");
 const fs = require("fs");
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 // EJS
 app.set("view engine", "ejs");
@@ -50,6 +50,6 @@ app.get("/cart", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-	console.log("см. тут: http://localhost:" + PORT);
+app.listen(port, () => {
+	console.log("см. тут: http://localhost:" + port)
 });
