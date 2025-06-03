@@ -30,8 +30,8 @@ app.get("/catalog", (req, res) => {
 });
 
 // Рендер каталога
-app.get("/cards", (req, res) => {
-	res.render("cards");
+app.get("/delivery", (req, res) => {
+	res.render("delivery");
 });
 
 // Рендер каталога

@@ -1,0 +1,188 @@
+/* Stalinist One; Prosto One */
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Stalinist+One&display=swap");
+
+body {
+    font-family: "Prosto One", serif;
+}
+
+h1 {
+    margin-top: 5vw;
+    text-align: center;
+}
+
+.calculator-container {
+    position: relative;
+    display: flex;
+    width: 60vw;
+    height: 18vw;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 1vw;
+}
+
+.calculator {
+    padding: 20px;
+    width: 40vw;
+    margin-right: 20px;
+}
+
+.calculator h3 {
+    margin-top: 0;
+}
+
+.weight-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.weight-option {
+    background: #278e97;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 3vw;
+    text-align: center;
+    font-family: "Prosto One", serif;
+}
+
+.weight-option.active {
+    background: #14595f;
+}
+
+.input-field {
+    width: 30vw;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Prosto One", serif;
+}
+
+.weight-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.weight-item {
+    background: #278e97;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 3vw;
+    text-align: center;
+    font-family: "Prosto One", serif;
+}
+
+.weight-item.active {
+    background: #14595f;
+}
+
+.result {
+    background: #278e97;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.result-value {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.result p {
+    margin-top: 3vw;
+    font-size: 9px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-box {
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #000;
+}
+
+.questions {
+    width: 91.8vw;
+    margin-top: 3vw;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.questions h2 {
+    color: #333;
+}
+
+.questions-nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.questions-nav-link {
+    padding: 10px;
+    background-color: #e9e9e9;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.questions-nav-link:hover {
+    background-color: #ddd;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.answer.active {
+    display: block;
+}

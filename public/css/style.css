@@ -63,6 +63,7 @@ header {
 }
 
 .cart-link {
+    position: relative;
     font-family: "Prosto One", serif;
     background-color: #278e97;
     color: #fff;
@@ -76,6 +77,22 @@ header {
 
 .cart-link:hover {
     opacity: 0.8;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7vw;
+    font-weight: bold;
 }
 
 
@@ -366,8 +383,8 @@ main {
 }
 
 .discount {
-    background-color: #fff3cd;
-    color: #856404;
+    background-color: #fbeeee;
+    color: #bd4848;
     padding: 5px 10px;
     border-radius: 10px;
     display: inline-block;
@@ -442,6 +459,18 @@ main {
 .store-availability:hover {
     background-color: #e9ecef;
 }
+
+.notification {
+    position: fixed;
+    top: 5vw;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
 
 
 /* Footer Styles */

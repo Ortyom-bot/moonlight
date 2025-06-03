@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Определяем категории товаров
     const categories = {
         "Золото": ["z_ring1", "z_ring2", "z_ring3", "z_bracelet1", "z_bracelet2", "z_earrings", "z_pendant", "z_brooch"],
@@ -12,12 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener("click", function (e) {
             e.preventDefault();
 
-            // Убираем активность у всех ссылок
+            // Убираем класс активности у всех ссылок
             document.querySelectorAll(".catalog-choose-nav a").forEach((item) => {
+                item.classList.remove("catalog-choose-nav-active");
                 item.removeAttribute("data-active");
             });
 
-            // Добавляем активность текущей ссылке
+            // Добавляем класс активности текущей ссылке
+            this.classList.add("catalog-choose-nav-active");
             this.setAttribute("data-active", "true");
 
             // Получаем выбранную категорию

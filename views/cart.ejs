@@ -6,20 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="scripts/carousel.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/cart.js"></script>
 
     <title>MOONLIGHT</title>
 </head>
 
 <body style='overflow-x: hidden;'>
     <%- include('templates/header.ejs') %>
-    
-    
 
-    <%- include('templates/footer.ejs') %>
+        <main>
+            <div class="cart-container">
+                <div id="cartItems">
+                    <!-- Товары в корзине будут отображаться здесь -->
+                </div>
+                <div class="cart-summary">
+                    <h2>Итого</h2>
+                    <div class="summary-item">
+                        <span>Товары на сумму</span>
+                        <span id="subtotal">0 ₽</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Скидка по акции</span>
+                        <span id="discount">0 ₽</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Итого</span>
+                        <span id="totalPrice">0 ₽</span>
+                    </div>
+                    <button id="checkoutButton">Перейти к оформлению</button>
+                    <div class="bonus-info">
+                        Будет начислено <span id="bonus">0</span> бонусов
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('templates/footer.ejs') %>
 </body>
 
 </html>

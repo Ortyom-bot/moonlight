@@ -1,0 +1,18 @@
+/* Stalinist One; Prosto One */
+@import url("https://fonts.googleapis.com/css2?family=Prosto+One&family=Stalinist+One&display=swap");
+
+h1 {
+    margin-top: 5vw;
+    font-family: "Prosto One", serif;
+}
+
+.map-card {
+    width: 93.8vw;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    justify-content: center;
+}

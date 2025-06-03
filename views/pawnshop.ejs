@@ -6,20 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pawnshop.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="scripts/carousel.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/pawnshop.js"></script>
 
-    <title>MOONLIGHT</title>
+    <title>Ювелирный ломбард MOONLIGHT</title>
 </head>
 
-<body style='overflow-x: hidden;'>
+<body style='overflow-x: hidden;' onload="showAnswer(0)">
     <%- include('templates/header.ejs') %>
-    
-    
 
-    <%- include('templates/footer.ejs') %>
+        <h1>Рассчитайте, сколько получите<br>под залог золота</h1>
+
+        <main>
+            <div class="calculator-container">
+                <div class="calculator">
+                    <h3>Выберите пробу</h3>
+                    <div class="weight-selector">
+                        <button class="weight-option" data-price="2690">375</button>
+                        <button class="weight-option" data-price="3590">500</button>
+                        <button class="weight-option" data-price="4200">583</button>
+                        <button class="weight-option active" data-price="4200">585</button>
+                        <button class="weight-option" data-price="5385">750</button>
+                        <button class="weight-option" data-price="6105">850</button>
+                        <button class="weight-option" data-price="6460">900</button>
+                        <button class="weight-option" data-price="6880">958</button>
+                    </div>
+                    <h3>Введите вес изделия</h3>
+                    <input type="text" class="input-field" value="1 г">
+                    <h3>Или выберите из списка</h3>
+                    <div class="weight-list">
+                        <button class="weight-item active" data-weight="1">1 г</button>
+                        <button class="weight-item" data-weight="2">2 г</button>
+                        <button class="weight-item" data-weight="3">3 г</button>
+                        <button class="weight-item" data-weight="4">4 г</button>
+                        <button class="weight-item" data-weight="5">5 г</button>
+                        <button class="weight-item" data-weight="10">10 г</button>
+                        <button class="weight-item" data-weight="15">15 г</button>
+                        <button class="weight-item" data-weight="25">25 г</button>
+                        <button class="weight-item" data-weight="50">50 г</button>
+                    </div>
+                </div>
+                <div class="result">
+                    <h3>Выдадим на руки</h3>
+                    <div class="result-value">4200 ₽</div>
+                    <p>Калькулятор рассчитывает примерную стоимость изделия. Для определения точной категории изделия
+                        необходимо обратиться в ломбард.</p>
+                </div>
+            </div>
+
+            <section>
+                <h1>Полезная информация</h1>
+                <div class="info-container">
+                    <div class="info-box">
+                        <img src="images/pawnshop/clock.png" alt="Крупный займ">
+                        <p><span class="highlight">Крупный займ</span><br>под залог золота</p>
+                    </div>
+                    <div class="info-box">
+                        <img src="images/pawnshop/lightning.png" alt="1 000 000 Р">
+                        <p><span class="highlight">1 000 000 ₽</span><br>до 65 дней</p>
+                    </div>
+                    <div class="info-box">
+                        <img src="images/pawnshop/calculator.png" alt="Оплата процентов">
+                        <p><span class="highlight">Оплата процентов</span><br>быстро и онлайн</p>
+                    </div>
+                    <div class="info-box">
+                        <img src="images/pawnshop/additionally.png" alt="Программа лояльности">
+                        <p><span class="highlight">Программа лояльности</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 3vw;">
+                <div class="questions">
+                    <h2>Остались вопросы?</h2>
+                    <div style="display: flex;">
+                        <div style="flex: 1; padding: 10px;">
+                            <ol class="questions-nav">
+                                <li class="questions-nav-link" onclick="showAnswer(0)">Пользование займом</li>
+                                <li class="questions-nav-link" onclick="showAnswer(1)">Обмен старого золота на новые украшения</li>
+                                <li class="questions-nav-link" onclick="showAnswer(2)">Не подлежат приёму в ломбард</li>
+                                <li class="questions-nav-link" onclick="showAnswer(3)">Запрет оформления займов гражданам недружественных стран</li>
+                                <li class="questions-nav-link" onclick="showAnswer(4)">Кредитные каникулы для мобилизованных граждан</li>
+                            </ol>
+                        </div>
+                        <div style="flex: 1; padding: 10px; background-color: white;" id="answerContainer">
+                            <!-- Answers will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <%- include('templates/footer.ejs') %>
 </body>
 
 </html>
